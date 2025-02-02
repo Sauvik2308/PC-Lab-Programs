@@ -1,6 +1,9 @@
 #include <iostream>
 
-class Year {
+using namespace std;
+
+class Year
+{
 private:
     int year;
 
@@ -9,26 +12,32 @@ public:
     Year(int y) : year(y) {}
 
     // Function to check if the year is a leap year
-    bool isLeapYear() const {
+    bool isLeapYear() const
+    {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
     // Destructor
-    ~Year() {
-        std::cout << "Year object is destroyed." << std::endl;
+    ~Year()
+    {
+        cout << "Year object is destroyed." << endl;
     }
 };
 
-int main() {
+int main()
+{
     int year;
-    std::cout << "Enter a year: ";
-    std::cin >> year;
+    cout << "Enter a year: ";
+    cin >> year;
 
     Year y(year);
-    if (y.isLeapYear()) {
-        std::cout << year << " is a leap year." << std::endl;
-    } else {
-        std::cout << year << " is not a leap year." << std::endl;
+    if (y.isLeapYear())
+    {
+        cout << year << " is a leap year." << endl;
+    }
+    else
+    {
+        cout << year << " is not a leap year." << endl;
     }
 
     return 0;
